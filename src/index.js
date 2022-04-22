@@ -9,8 +9,11 @@ const connect = require("./config/db");
 const PORT = process.env.PORT;
 
 const studentController = require("./controller/student.controller");
+const teacherController = require("./controller/teacher.controller");
 
-app.use("/", studentController)
+
+app.use("/", studentController);
+app.use("/", teacherController);
 
 
 app.listen(PORT, async()=>{
