@@ -17,7 +17,7 @@ router.delete("/marks/:id", async(req, res)=>{
     const marks = await Marks.findByIdAndDelete(req.params.id);
     res.send(marks);
 })
-router.patch("/marks:id", async(req, res)=>{
+router.patch("/marks/:id", async(req, res)=>{
     const marks = await Marks.findByIdAndUpdate(req.params.id, req.body, {
         new: true,
       });

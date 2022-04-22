@@ -13,11 +13,11 @@ router.post("/student", async(req, res)=>{
     res.send(student);
 })
 
-router.delete("/marks/:id", async(req, res)=>{
+router.delete("/student/:id", async(req, res)=>{
     const student = await Student.findByIdAndDelete(req.params.id);
     res.send(student);
 })
-router.patch("/marks:id", async(req, res)=>{
+router.patch("/student/:id", async(req, res)=>{
     const student = await Student.findByIdAndUpdate(req.params.id, req.body, {
         new: true,
       });
