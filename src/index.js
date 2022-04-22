@@ -10,10 +10,12 @@ const PORT = process.env.PORT;
 
 const studentController = require("./controller/student.controller");
 const teacherController = require("./controller/teacher.controller");
+const markController = require("./controller/marks.controller");
 
 
 app.use("/", studentController);
 app.use("/", teacherController);
+app.use("/", markController);
 
 
 app.listen(PORT, async()=>{
