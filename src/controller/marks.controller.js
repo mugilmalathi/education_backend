@@ -13,4 +13,15 @@ router.post("/marks", async(req, res)=>{
     res.send(marks);
 })
 
+router.delete("/marks/:id", async(req, res)=>{
+    const marks = await Marks.findByIdAndDelete(req.params.id);
+    res.send(marks);
+})
+router.patch("/marks:id", async(req, res)=>{
+    const marks = await Marks.findByIdAndUpdate(req.params.id, req.body, {
+        new: true,
+      });
+    res.send(marks);
+})
+
 module.exports = router;
