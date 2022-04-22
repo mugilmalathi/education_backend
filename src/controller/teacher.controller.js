@@ -12,3 +12,5 @@ router.post("/teacher", async(req, res)=>{
     const teacher = await Teacher.create(req.body);
     res.send(teacher);
 })
+
+module.exports = router;
