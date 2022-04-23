@@ -2,11 +2,11 @@ const mongoose = require("mongoose");
 
 const MarkSchema = new mongoose.Schema({
     mark_id:{type: Number},
-    tamil:{type: String},
-    english:{type: String},
-    maths:{type: String},
-    science:{type: String},
-    social_science:{type: String},
+    tamil:{type: Number},
+    english:{type: Number},
+    maths:{type: Number},
+    science:{type: Number},
+    social_science:{type: Number},
 },{
     versionkey: false,
     timestamps: true
